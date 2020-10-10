@@ -11,7 +11,7 @@ public class Test {
 		String str = "";
 		Scanner scan = new Scanner(System.in);
 
-		System.out.print("Введите выражение:\n");
+		System.out.print("Р’РІРµРґРёС‚Рµ РІС‹СЂР°Р¶РµРЅРёРµ:\n");
 		str = scan.nextLine();
 		ArrayList<Element> tokens = SpisokCalc.tokenize(str);
 		SpisokCalc.SpisokUpdate(tokens, Operation.MULTIPLY, Operation.DIVIDE);
@@ -19,9 +19,9 @@ public class Test {
 		Element result = tokens.get(0);
 		double itog = result.calculate();
 		if (Double.isInfinite(itog)) {
-			System.out.println("Деление на 0 неопределено");
+			System.out.println("Р”РµР»РµРЅРёРµ РЅР° 0 РЅРµРѕРїСЂРµРґРµР»РµРЅРѕ");
 		} else {
-			System.out.println("Результат = " + itog);
+			System.out.println("Р РµР·СѓР»СЊС‚Р°С‚ = " + itog);
 		}
 		scan.close();
 	}
